@@ -15,13 +15,13 @@ export function Header() {
             </a>
           </div>
           <div className="relative z-50 flex items-center justify-between font-black text-gray uppercase gap-2 text-2xl mb-1 text-center">
-            <span className="bg-[#1a1a1a]/70 py-3.5 max-w-[136px] w-full rounded-2xl">
+            <span className="bg-[#1a1a1a]/70 py-3.5 w-full rounded-2xl">
               Play
             </span>
-            <span className="bg-[#1a1a1a]/70 py-3.5 max-w-[136px] w-full rounded-2xl">
+            <span className="bg-[#1a1a1a]/70 py-3.5 w-full rounded-2xl">
               Think
             </span>
-            <span className="bg-[#1a1a1a]/70 py-3.5 max-w-[136px] w-full rounded-2xl">
+            <span className="bg-[#1a1a1a]/70 py-3.5 w-full rounded-2xl">
               Win
             </span>
           </div>
