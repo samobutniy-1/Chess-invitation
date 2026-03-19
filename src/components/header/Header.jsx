@@ -1,10 +1,10 @@
 export function Header() {
   return (
     <>
-      <div className="relative">
+      <div className="relative mb-6">
         <div className="flex flex-col justify-between h-screen p-5">
           <div className="text-gray relative z-50 flex flex-col text-center items-center">
-            <h1 className="font-montserrat font-black uppercase text-[40px] w-full mb-12.5 mt-18">
+            <h1 className="font-black uppercase text-[40px] w-full mb-12.5 mt-18">
               Make your first move
             </h1>
             <a
