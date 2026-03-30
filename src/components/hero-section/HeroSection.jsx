@@ -1,11 +1,11 @@
+import { SectionTitle } from "../section-title/SectionTitle";
+
 export function HeroSection() {
   return (
     <section className="text-gray">
       <div className="flex justify-between items-center mb-6 gap-6">
         <img src="/knight.png" alt="Knight" />
-        <h2 className="text-4xl font-black text-center uppercase">
-          Make your first move
-        </h2>
+        <SectionTitle>Make your first move</SectionTitle>
       </div>
       <p className="text-2xl font-bold">
         Ready to make your first move? Join our chess club and challenge your

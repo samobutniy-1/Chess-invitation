@@ -1,3 +1,5 @@
+import { SectionTitle } from "../section-title/SectionTitle";
+
 export function AdvantagesSection() {
   const stats = [
     { id: 1, number: "5", label: "years", image: "/king.png" },
@@ -7,9 +9,7 @@ export function AdvantagesSection() {
   ];
   return (
     <section className="text-gray">
-      <h2 className="font-black text-4xl w-full mb-6 uppercase">
-        Advantages of studying at our school
-      </h2>
+      <SectionTitle>Advantages of studying at our school</SectionTitle>
       <div>
         <ul className="grid gap-6">
           <div className="relative grid gap-6">
