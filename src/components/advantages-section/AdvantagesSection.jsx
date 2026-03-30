@@ -7,7 +7,7 @@ export function AdvantagesSection() {
   ];
   return (
     <section className="text-gray">
-      <h2 className="font-black text-4xl w-full mb-6">
+      <h2 className="font-black text-4xl w-full mb-6 uppercase">
         Advantages of studying at our school
       </h2>
       <div>

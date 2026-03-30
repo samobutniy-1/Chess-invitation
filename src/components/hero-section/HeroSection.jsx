@@ -3,7 +3,7 @@ export function HeroSection() {
     <section className="text-gray">
       <div className="flex justify-between items-center mb-6 gap-6">
         <img src="/knight.png" alt="Knight" />
-        <h2 className="text-4xl font-black text-center">
+        <h2 className="text-4xl font-black text-center uppercase">
           Make your first move
         </h2>
       </div>
