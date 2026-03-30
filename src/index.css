@@ -3,6 +3,7 @@
 @theme {
   --color-gray: #cacaca;
   --color-box: #171717;
+  --color-input: #1a1a1a;
 }
 
 body {

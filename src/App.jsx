@@ -2,6 +2,7 @@ import { AdvantagesSection } from "./components/advantages-section/AdvantagesSec
 import { GroupsSection } from "./components/groups-section/GroupsSection";
 import { Header } from "./components/header/Header";
 import { HeroSection } from "./components/hero-section/HeroSection";
+import { SignUpSection } from "./components/sign-up-section/SignUpSection";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <HeroSection />
         <AdvantagesSection />
         <GroupsSection />
+        <SignUpSection />
       </main>
     </>
   );
