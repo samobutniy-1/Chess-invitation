@@ -1,4 +1,9 @@
-export function Header() {
+export function Header({ sectionRef }) {
+  const scrollToSection = () => {
+    sectionRef.current.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="relative h-screen overflow-hidden">
       <video
@@ -19,12 +24,13 @@ export function Header() {
             Make your first move
           </h1>
 
-          <a
-            href="/"
-            className="font-montserrat font-black uppercase text-[clamp(32px,5vw,40px)] border-2 rounded-2xl max-w-xs bg-[#1E1E1E]/75 py-5 px-9 hover:text-black hover:border-black hover:bg-white/75 transition duration-300  xl:max-w-sm "
+          <button
+            type="button"
+            onClick={scrollToSection}
+            className="font-montserrat font-black uppercase text-[clamp(32px,5vw,40px)] border-2 rounded-2xl max-w-xs bg-[#1E1E1E]/75 py-5 px-9 hover:text-black hover:border-black hover:bg-white/75 hover:cursor-pointer transition duration-300  xl:max-w-sm "
           >
             Sign up
-          </a>
+          </button>
         </div>
 
         <div className="flex items-center justify-between font-black text-gray-200 uppercase gap-2 text-2xl mb-1">

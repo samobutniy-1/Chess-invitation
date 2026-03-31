@@ -1,8 +1,11 @@
 import { SectionTitle } from "../section-title/SectionTitle";
 
-export function SignUpSection() {
+export function SignUpSection({ sectionRef }) {
   return (
-    <section className="text-gray md:flex md:flex-col md:items-center">
+    <section
+      ref={sectionRef}
+      className="text-gray md:flex md:flex-col md:items-center"
+    >
       <SectionTitle className="text-center">
         sign up for your first class now!
       </SectionTitle>
@@ -45,7 +48,7 @@ export function SignUpSection() {
         </div>
         <button
           type="submit"
-          className="uppercase font-black text-3xl py-5 px-8 bg-input/70 border border-white rounded-2xl max-w-3xs self-center hover:text-black hover:border-black hover:bg-white/75 transition duration-300"
+          className="uppercase font-black text-3xl py-5 px-8 bg-input/70 border border-white rounded-2xl max-w-3xs self-center hover:text-black hover:border-black hover:bg-white/75 hover:cursor-pointer transition duration-300"
         >
           sign up
         </button>
