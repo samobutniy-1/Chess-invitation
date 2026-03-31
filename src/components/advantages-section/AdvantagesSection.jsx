@@ -10,7 +10,9 @@ export function AdvantagesSection() {
 
   return (
     <section className="text-gray">
-      <SectionTitle>Advantages of studying at our school</SectionTitle>
+      <SectionTitle className="lg:text-center">
+        Advantages of studying at our school
+      </SectionTitle>
       <ul className="grid gap-6 md:grid-cols-2 md:grid-rows-2">
         <div className="relative grid gap-6 md:row-span-2 grid-rows-2">
           <img
