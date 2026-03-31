@@ -2,8 +2,8 @@ import { SectionTitle } from "../section-title/SectionTitle";
 
 export function GroupsSection() {
   return (
-    <section className="text-gray ">
-      <SectionTitle className="max-w-[65%]"> 3 types of groups</SectionTitle>
+    <section className="text-gray">
+      <SectionTitle>3 types of groups</SectionTitle>
 
       <p className="font-bold text-[clamp(24px,5vw,40px)] mb-24">
         Beginner, intermediate and advanced — each group is carefully tailored

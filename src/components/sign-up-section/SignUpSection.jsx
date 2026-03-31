@@ -2,11 +2,11 @@ import { SectionTitle } from "../section-title/SectionTitle";
 
 export function SignUpSection() {
   return (
-    <section className="text-gray">
+    <section className="text-gray md:flex md:flex-col md:items-center">
       <SectionTitle className="text-center">
         sign up for your first class now!
       </SectionTitle>
-      <form className="flex flex-col gap-12">
+      <form className="flex w-full md:max-w-130 flex-col gap-12 ">
         <div className="flex flex-col gap-1">
           <label htmlFor="name" className="font-bold text-2xl">
             Name
