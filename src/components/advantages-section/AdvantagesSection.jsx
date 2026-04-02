@@ -3,7 +3,7 @@ import { SectionTitle } from "../section-title/SectionTitle";
 
 const container = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.2 } },
+  visible: { transition: { staggerChildren: 0.2, delayChildren: 0.2 } },
 };
 
 const item = {
