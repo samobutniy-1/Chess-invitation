@@ -1,5 +1,6 @@
 import { SectionTitle } from "../section-title/SectionTitle";
 import { useState, useEffect } from "react";
+import { motion } from "motion/react";
 
 export function HeroSection() {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -12,20 +13,32 @@ export function HeroSection() {
   }, []);
 
   return isDesktop ? (
-    <section className="text-gray flex justify-between items-center gap-6">
-      <div className="w-full max-w-[250px] ml-10">
+    <section className="text-gray flex justify-between items-center gap-6 overflow-x-hidden">
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="w-full max-w-[250px] ml-16"
+      >
         <img className="w-full" src="/knight.png" alt="Knight" />
-      </div>
-      <div className="max-w-[60%]">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: 300 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="max-w-[60%]"
+      >
         <SectionTitle>Make your first move</SectionTitle>
-        <p className="text-2xl font-bold lg:text-3xl xl:text-4xl">
+        <motion.p className="text-2xl font-bold lg:text-3xl xl:text-4xl">
           Ready to make your first move? Join our chess club and challenge your
           mind, improve your strategy, and meet players who share your passion.
           Whether you're a beginner or already experienced, you'll find the
           perfect place to grow, compete, and enjoy the game. Step into the
           world of chess — think ahead, play smart, and win with confidence.
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
     </section>
   ) : (
     <section className="text-gray ">
