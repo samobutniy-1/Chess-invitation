@@ -29,8 +29,11 @@ export function HeroSection() {
     </section>
   ) : (
     <section className="text-gray ">
-      <div className="flex justify-between items-center mb-6 gap-6">
-        <img src="/knight.png" alt="Knight" />
+      <div className=" flex justify-between items-center mb-6 gap-6">
+        <div className="w-full max-w-[120px]">
+          <img className="w-full" src="/knight.png" alt="Knight" />
+        </div>
+
         <SectionTitle>Make your first move</SectionTitle>
       </div>
       <p className="text-2xl font-bold">

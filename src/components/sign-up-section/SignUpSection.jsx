@@ -16,6 +16,8 @@ export function SignUpSection({ sectionRef }) {
           </label>
           <input
             type="text"
+            required
+            minLength={2}
             id="name"
             placeholder="Magnus Carlsen"
             autoComplete="name"
@@ -28,6 +30,8 @@ export function SignUpSection({ sectionRef }) {
           </label>
           <input
             type="tel"
+            required
+            pattern="^\+?[0-9\s()-]{7,15}$"
             id="tel"
             placeholder="+1 (000) 123-1234"
             autoComplete="tel"
@@ -40,6 +44,7 @@ export function SignUpSection({ sectionRef }) {
           </label>
           <input
             type="email"
+            required
             id="email"
             placeholder="yourawesomemail@gmail.com"
             autoComplete="email"
