@@ -1,4 +1,15 @@
+import { motion } from "motion/react";
 import { SectionTitle } from "../section-title/SectionTitle";
+
+const container = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.2 } },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export function AdvantagesSection() {
   const stats = [
@@ -10,18 +21,38 @@ export function AdvantagesSection() {
 
   return (
     <section className="text-gray">
-      <SectionTitle className="lg:text-center">
-        Advantages of studying at our school
-      </SectionTitle>
-      <ul className="grid gap-6 md:grid-cols-2 md:grid-rows-2">
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <SectionTitle className="lg:text-center">
+          Advantages of studying at our school
+        </SectionTitle>
+      </motion.div>
+
+      <motion.ul
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="grid gap-6 md:grid-cols-2 md:grid-rows-2"
+      >
         <div className="relative grid gap-6 md:row-span-2 grid-rows-2">
-          <img
-            src="/king.png"
-            className="absolute right-5 top-0 h-full object-cover pointer-events-none z-10 brightness-10"
-            alt=""
-          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+            className="absolute right-5 top-0 h-full object-cover pointer-events-none z-10"
+          >
+            <img src="/king.png" className="h-full brightness-10" alt="" />
+          </motion.div>
+
           {stats.slice(0, 2).map(({ id, number, label }) => (
-            <li
+            <motion.li
+              variants={item}
               key={id}
               className="relative w-full bg-box flex flex-col p-6 rounded-3xl"
             >
@@ -33,21 +64,25 @@ export function AdvantagesSection() {
                   {label}
                 </span>
               </div>
-            </li>
+            </motion.li>
           ))}
         </div>
 
         {stats.slice(2).map(({ id, number, label }) => (
-          <li key={id} className="w-full bg-box flex flex-col p-6 rounded-3xl">
+          <motion.li
+            variants={item}
+            key={id}
+            className="w-full bg-box flex flex-col p-6 rounded-3xl"
+          >
             <div className="flex flex-col justify-between gap-2 grow">
               <span className="font-black text-9xl">{number}</span>
               <span className="font-bold text-[clamp(24px,5vw,42px)]">
                 {label}
               </span>
             </div>
-          </li>
+          </motion.li>
         ))}
-      </ul>
+      </motion.ul>
     </section>
   );
 }
