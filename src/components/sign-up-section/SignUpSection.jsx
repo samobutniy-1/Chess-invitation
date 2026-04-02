@@ -56,7 +56,8 @@ export function SignUpSection({ sectionRef }) {
           <input
             type="tel"
             required
-            pattern="^\+?[0-9\s()-]{7,15}$"
+            title="Enter a valid phone number, e.g. +1 (000) 123-1234"
+            pattern="^\+?[0-9\s\(\)\-]{7,15}$"
             id="tel"
             placeholder="+1 (000) 123-1234"
             autoComplete="tel"
