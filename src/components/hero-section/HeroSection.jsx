@@ -17,14 +17,14 @@ export function HeroSection() {
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="w-full max-w-[250px] ml-16"
       >
         <img className="w-full" src="/knight.png" alt="Knight" />
       </motion.div>
       <motion.div
-        initial={{ opacity: 0, x: 300 }}
+        initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -43,19 +43,37 @@ export function HeroSection() {
   ) : (
     <section className="text-gray ">
       <div className=" flex justify-between items-center mb-6 gap-6">
-        <div className="w-full max-w-[120px]">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="w-full max-w-[120px]"
+        >
           <img className="w-full" src="/knight.png" alt="Knight" />
-        </div>
-
-        <SectionTitle>Make your first move</SectionTitle>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <SectionTitle>Make your first move</SectionTitle>
+        </motion.div>
       </div>
-      <p className="text-2xl font-bold">
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="text-2xl font-bold"
+      >
         Ready to make your first move? Join our chess club and challenge your
         mind, improve your strategy, and meet players who share your passion.
         Whether you're a beginner or already experienced, you'll find the
         perfect place to grow, compete, and enjoy the game. Step into the world
         of chess — think ahead, play smart, and win with confidence.
-      </p>
+      </motion.p>
     </section>
   );
 }
