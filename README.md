@@ -2,6 +2,10 @@
 
 A simple landing page for a chess club, built as a practice project for learning **Tailwind CSS**, **Framer Motion animations**, and **basic HTML form handling**.
 
+🔗 **Live Demo:** [chess-invitation.vercel.app](https://chess-invitation.vercel.app/)
+
+
+
 ## 🛠️ Tech Stack
 
 - **React** — UI
